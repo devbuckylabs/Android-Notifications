@@ -30,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
             NotificationChannel channel=new NotificationChannel(CHANNEL_ID,CHANNEL_NAME,NotificationManager.IMPORTANCE_DEFAULT);
             channel.setDescription(CHANNEL_DESC);
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            PendingIntent pendingIntent=PendingIntent.getActivity(this,0,intent,0);
+
             NotificationManager manager=getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
 
